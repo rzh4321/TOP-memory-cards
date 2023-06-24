@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Header({score, best}) {
+function Header({score, best, showNames, toggleShowNames}) {
   return (
     <div className="header-column">
         <div className="flex-row-space-between">
@@ -11,7 +11,10 @@ function Header({score, best}) {
             </ul>
 
         </div>
-        <span class="desc">Get points by clicking on a player but don't click on any more than once!</span>
+        <div className="flex-row-space-between">
+            <span className="desc">Get points by clicking on a player but don't click on any more than once!</span>
+            <button onClick={() => toggleShowNames(!showNames)}>{showNames? "Show pictures only": "Show names"}</button>
+        </div>
     </div>
   )
 }

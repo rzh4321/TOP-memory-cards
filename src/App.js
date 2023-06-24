@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from "./components/Header";
 import "./App.css";
 import Grid from './components/Grid';
 
 function App() {
   const [set, changeSet] = useState(new Set());
-  let [best, changeBest] = useState(0);
-  const cards = []
+  const [best, changeBest] = useState(0);
+  const [showNames, changeShowNames] = useState(true);
+  const cards = [];
 
   function checkCard(cardName) {
     if (!set.has(cardName)) {
@@ -35,9 +36,9 @@ function App() {
   return (
     <div>
       <header>
-        <Header score={set.size} best={best} />
+        <Header score={set.size} best={best} showNames={showNames} toggleShowNames={changeShowNames} />
       </header>
-      <Grid cards={cards} clickHandler={checkCard} />
+      <Grid cards={cards} clickHandler={checkCard} showNames={showNames} />
     </div>
   );
 }

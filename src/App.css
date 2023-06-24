@@ -31,7 +31,7 @@ ul {
 .header-column {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 .grid {
@@ -57,11 +57,11 @@ ul {
     align-items: center;
     margin-bottom: 10px;
     font-size: 30px;
+    cursor: pointer;
 }
 
-.card:hover {
+.card:hover, button:hover {
     box-shadow: 0px 0px 30px #8ab661;
-    cursor: pointer;
 }
 
 .card .img {
@@ -73,4 +73,23 @@ ul {
 
 .desc {
     font-size: 20px;
+}
+
+button {
+    border-radius: 10px;
+    background-color: #8ab661;
+    border: none;
+    font-size: 25px;
+    font-family: 'Galada', cursive;
+    color: white;
+    cursor: pointer;
+    padding-bottom: 0;
+}
+
+ul {
+    font-size: 20px;
+}
+
+.full-img {
+    height: 100% !important;
 }
