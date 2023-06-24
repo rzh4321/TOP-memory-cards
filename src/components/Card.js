@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Card({img}) {
+function Card({img, clickHandler}) {
   return (
-    <div>{img}</div>
+    <div className="card" onClick={() => clickHandler(img)}>{img}</div>
   )
 }
 

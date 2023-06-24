@@ -1,10 +1,10 @@
 import React from 'react';
 import Card from './Card';
 
-export default function Grid({cards}) {
-    const arr = cards.map(card => <Card img={card} />)
+export default function Grid({cards, clickHandler}) {
+    const arr = cards.map((card, ind) => <Card img={card} clickHandler={clickHandler} key={ind} />)
   return (
-    <div class="grid">
+    <div className="grid">
         {arr}
     </div>
   )
