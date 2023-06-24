@@ -1,5 +1,6 @@
 body {
     background-color: #3e6623;
+    margin: 0px;
 }
 
 header {
@@ -21,4 +22,13 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
 }

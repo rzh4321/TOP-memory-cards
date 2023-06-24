@@ -1,13 +1,13 @@
 import React from 'react'
 
-function Header() {
+function Header({score, best}) {
   return (
     <div className="header-column">
         <div className="flex-row-space-between">
             <h1>Memory Game</h1>
             <ul>
-                <li>Score: 12</li>
-                <li>Best score: 11</li>
+                <li>Score: {score}</li>
+                <li>Best score: {best}</li>
             </ul>
 
         </div>
