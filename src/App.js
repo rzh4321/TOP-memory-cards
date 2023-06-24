@@ -6,12 +6,12 @@ import Grid from './components/Grid';
 function App() {
   const [set, changeSet] = useState(new Set());
   let [best, changeBest] = useState(0);
-  const cards = [1, 2, 3, 4, 5];
+  const cards = []
 
-  function checkCard(card) {
-    if (!set.has(card)) {
+  function checkCard(cardName) {
+    if (!set.has(cardName)) {
       const updatedSet = new Set(set);
-      updatedSet.add(card);
+      updatedSet.add(cardName);
       changeSet(updatedSet);
     }
     else {
@@ -22,6 +22,15 @@ function App() {
       changeSet(new Set());
     }
   }
+
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  shuffleArray(cards);
 
   return (
     <div>

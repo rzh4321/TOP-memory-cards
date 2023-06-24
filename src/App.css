@@ -1,12 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Galada&display=swap');
+
+
 body {
     background-color: #3e6623;
     margin: 0px;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0;
 }
 
 header {
     background-image: linear-gradient(#000,#3e6623);
     color: #b8860b;
     padding: 10px;
+    font-family: 'Acme', sans-serif;
+    margin-bottom: 20px;
 }
 
 .flex-row-space-between {
@@ -32,6 +42,7 @@ ul {
     justify-content: space-between;
     padding: 10px;
     color: white;
+    font-family: 'Galada', cursive;
 }
 
 .card {
@@ -40,9 +51,26 @@ ul {
     width: 280px;
     height: 350px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 30px;
 }
 
 .card:hover {
     box-shadow: 0px 0px 30px #8ab661;
     cursor: pointer;
+}
+
+.card .img {
+    margin: 5px;
+    width: 265px;
+    height: 265px;
+    border-radius: 15px;
+}
+
+.desc {
+    font-size: 20px;
 }
