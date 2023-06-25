@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Header from "./components/Header";
 import "./App.css";
 import Grid from './components/Grid';
@@ -7,6 +7,7 @@ function App() {
   const [set, changeSet] = useState(new Set());
   const [best, changeBest] = useState(0);
   const [showNames, changeShowNames] = useState(true);
+  const prevShowNames = useRef();
   const cards = [{name: "RJ Barrett", url: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395625.png&w=350&h=254"},
                   {name: "Jalen Brunson", url: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3934672.png&w=350&h=254"},
                   {name: "Evan Fournier", url: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6588.png&w=350&h=254"},
@@ -47,7 +48,14 @@ function App() {
     }
   }
 
-  shuffleArray(cards);
+  useEffect(() => {
+    prevShowNames.current = showNames;
+  }, [showNames]);
+
+  
+  if (prevShowNames.current === showNames) {
+    shuffleArray(cards);
+  }
 
   return (
     <div>
