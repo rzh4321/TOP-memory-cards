@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TOP-memory-cards/static/css/main.76a4cb82.css",
+    "main.js": "/TOP-memory-cards/static/js/main.03e7496c.js",
+    "index.html": "/TOP-memory-cards/index.html",
+    "main.76a4cb82.css.map": "/TOP-memory-cards/static/css/main.76a4cb82.css.map",
+    "main.03e7496c.js.map": "/TOP-memory-cards/static/js/main.03e7496c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76a4cb82.css",
+    "static/js/main.03e7496c.js"
+  ]
+}
